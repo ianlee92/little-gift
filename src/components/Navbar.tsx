@@ -1,9 +1,14 @@
 import { Box, Flex, Button, Link as ChakraLink } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 
+interface User {
+  email: string;
+  // Add other user properties as needed
+}
+
 interface NavbarProps {
-  user: any;
-  setUser: (user: any) => void;
+  user: User | null;
+  setUser: (user: User | null) => void;
 }
 
 const Navbar = ({ user, setUser }: NavbarProps) => {

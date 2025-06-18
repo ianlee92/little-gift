@@ -3,6 +3,12 @@ import { ChakraProvider, Box, Container } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
+// Types
+interface User {
+  email: string;
+  // Add other user properties as needed
+}
+
 // Components
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
@@ -11,7 +17,7 @@ import Inventory from './pages/Inventory'
 import Login from './pages/Login'
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState<User | null>(null)
 
   return (
     <ChakraProvider>
