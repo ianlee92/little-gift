@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChakraProvider, Box, Container } from '@chakra-ui/react'
+import { ChakraProvider, Box, Container, defaultSystem } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 
@@ -20,7 +20,7 @@ function App() {
   const [user, setUser] = useState<User | null>(null)
 
   return (
-    <ChakraProvider>
+    <ChakraProvider value={defaultSystem}>
       <Router>
         <Box minH="100vh" bg="gray.50">
           <Navbar user={user} setUser={setUser} />
