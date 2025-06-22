@@ -15,7 +15,6 @@ const Login = ({ setUser }: LoginProps) => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault()
-    // Simple login simulation
     if (email && password) {
       setUser({ email })
     }

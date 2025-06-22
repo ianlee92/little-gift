@@ -3,7 +3,6 @@ import { Link as RouterLink } from 'react-router-dom'
 
 interface User {
   email: string;
-  // Add other user properties as needed
 }
 
 interface NavbarProps {
